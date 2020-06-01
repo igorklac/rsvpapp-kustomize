@@ -4,9 +4,15 @@ namePrefix: staging-
 commonLabels:
   env: staging
 patchesStrategicMerge:
-- staging-configmap.yaml 
+- staging-configmap.yaml
 configMapGenerator:
-- name: rsvpconfig-staging
-  literals:
-    - TEXT1="Welcome to"
-    - TEXT2="Staging"
+- literals:
+  - TEXT1="Welcome to"
+  - TEXT2="Staging"
+  name: rsvpconfig-staging
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+images:
+- name: teamcloudyuga/rsvpapp
+  newName: igorklac/rsvpapp
+  newTag: f809102ebf80e59c16315b9416a5d90af0f17f2a
