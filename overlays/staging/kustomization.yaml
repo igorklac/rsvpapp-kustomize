@@ -15,4 +15,4 @@ kind: Kustomization
 images:
 - name: teamcloudyuga/rsvpapp
   newName: igorklac/rsvpapp
-  newTag: f809102ebf80e59c16315b9416a5d90af0f17f2a
+  newTag: 97a99fe31b78261948735f149937b43772c82433
