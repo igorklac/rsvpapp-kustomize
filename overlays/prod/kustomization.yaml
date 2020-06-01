@@ -11,3 +11,7 @@ configMapGenerator:
   name: rsvpconfig-prod
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
+images:
+- name: teamcloudyuga/rsvpapp
+  newName: igorklac/rsvpapp
+  newTag: 97a99fe31b78261948735f149937b43772c82433
